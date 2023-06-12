@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>user page</title>
+  <link rel="stylesheet" type="text/css" href="CSS-Stylesheet/bootstrap.css">
+  <link rel="stylesheet" href="CSS-Stylesheet/user_admin_yourdetail.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <!-- <script src="Javascript/user_admin_account.js" defer></script> -->
+</head>
+
+<body>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="btn btn-outline-success my-2 my-sm-0 nav-link" aria-current="page"
+                href="main_page.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-success my-2 my-sm-0 nav-link" href="Your_details.html">My Account</a>
+            </li>
+            <li class="nav-item">
+              <button id="myBtn" class="btn btn-outline-success my-2 my-sm-0 nav-link " type="button">About</button>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <!-- <a class="btn btn-outline-success my-2 my-sm-0" href="login.html">Login</a> -->
+            <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="button">Signup</button> -->
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Background image -->
+    <div class="  bg-image header_back_image ">
+      <div class="mask mask_back_image ">
+        <div id="club_title" class="text-center">
+          <h1 id="clubname">Football Club</h1>
+          <p id="user">User: Jokar6_6 </p>
+        </div>
+        <button id="join" class="btn btn-primary" type="button">Join</button>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  <!-- Trigger/Open The Modal -->
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+
+  </div>
+  <!-- The Modal -->
+
+  <div id="events">
+    <h2>Events</h2>
+    <div id="upcomin_events">
+      <p id="upcomin_events_text">Upcoming Events</p>
+      <ul id="event_list">
+        <li>
+          XXXX
+          <button id="event_description" class="btn btn-secondary event_description" type="button">Event
+            description</button>
+          <button v-on:click="rsvp_me" id="rsvp" class="btn btn-secondary" type="button">Click to send join
+            request</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modals_group">
+    <!-- description_modal -->
+    <div class="modal descriptionmodal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Event details</p>
+      </div>
+    </div>
+    <!-- description_modal -->
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-muted footer_mod">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5  d-lg-block">
+        <span>Get connected with us: </span>
+      </div>
+      <!-- Left -->
+
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Clubs Community
+            </h6>
+            <p>
+              Proud of the community we have built together, but the fun did not start yet, join us to
+              achieve the best experience. Don't hesitate and contact us whenever you have a question.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              NAME
+            </h6>
+            <p class="text-reset">Jash Suchak</p>
+            <p class="text-reset">Taozui Tao</p>
+            <p class="text-reset">Prakhar Pandey</p>
+            <p class="text-reset">Faisal Hawsawi</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p><i class="fas fa-phone "></i>+61 432 967 356</p>
+            <p><i class="fas fa-phone "></i>+61 434 875 685</p>
+            <p><i class="fas fa-phone "></i>+61 234 567 677</p>
+            <p><i class="fas fa-print "></i>+61 634 875 423</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home "></i>New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope "></i>
+              info@example.com
+            </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</body>
+<script src="Javascript/userpage.js" defer></script>
+
+</html>
+
+<script>
+
+
+</script>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="CSS-Stylesheet/bootstrap.css">
+  <script src="Javascript/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="Javascript/myjscript.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.js"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+        // $(document).ready(function() {
+        // $("#btnLogin").click(function(){
+        //   $.session.set('user', $('#UserEmail').val());
+        //   window.location.href = "/main_page.html";
+        // });
+        // });
+        // data-callback="Google_Login"
+        //<a href="https://accounts.google.com/" class="btn myicons google"> <span><img height="30" weight="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2008px-Google_%22G%22_Logo.svg.png"></span> <i class="fa fa-google"></i> </a>
+  </script>
+
+
+</head>
+
+<body>
+  <div class="JHeader">
+    <div>
+      <h1 class="H1head"> <img height="60" weight="60" src="Images/logo_page-0001.jpg" alt="web_logo">
+        University Club</h1>
+    </div>
+  </div>
+
+  <div class="center">
+    <div id="app" class="loginBox">
+
+      <form onsubmit="login();return false" method="POST">
+        <h1>Login</h1>
+        <div class="social-container">
+          <div class="icons">
+
+            <div id="g_id_onload"
+              data-client_id="176124111804-da0crl4icfuijh2qqtq23i58hfg7gtls.apps.googleusercontent.com"
+              data-context="signin" data-ux_mode="popup" data-login_uri="/googles_login" data-auto_prompt="false">
+            </div>
+
+
+
+            <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="filled_black"
+              data-text="signin_with" data-size="large" data-logo_alignment="left">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Id</label>
+          <br>
+          <input id="UserEmail" required class="form-control" v-model="UserOrEmail" maxlength="30" type="text"
+            placeholder="Enter Email Id">
+        </div>
+
+        <br>
+
+        <div>
+          <label>Password</label>
+          <div>
+            <input required class="form-control" id="Password" maxlength="25" type="password" placeholder="**********">
+            <span class="SpanPassword" onclick="ShowPassword()"><img height="30" weight="30"
+                src="https://cdn-icons-png.flaticon.com/512/2710/2710718.png"></span>
+          </div>
+
+        </div>
+
+        <br>
+
+        <div class="d-flex justify-content-between w-100 mt-3">
+          <button type="button" id="btnLogin" class="btn btn-primary" onclick="login()">Sign In</button>
+          <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+
+        <br>
+
+      </form>
+    </div>
+  </div>
+
+  <footer class="text-center text-lg-start bg-light text-muted footer_mod">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us: </span>
+      </div>
+      <!-- Left -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Clubs Community
+            </h6>
+            <p>
+              Proud of the community we have built together, but the fun did not start yet, join us to
+              achieve the best experience. Don't hesitate and contact us whenever you have a question.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              NAME
+            </h6>
+            <p class="text-reset">Jash Suchak</p>
+            <p class="text-reset">Taozui Tao</p>
+            <p class="text-reset">Prakhar Pandey</p>
+            <p class="text-reset">Faisal Hawsawi</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p><i class="fas fa-phone "></i>+61 432 967 356</p>
+            <p><i class="fas fa-phone "></i>+61 434 875 685</p>
+            <p><i class="fas fa-phone "></i>+61 234 567 677</p>
+            <p><i class="fas fa-print "></i>+61 634 875 423</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home "></i>New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope "></i>
+              info@example.com
+            </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</body>
+
+</html>

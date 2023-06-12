@@ -1,0 +1,165 @@
+.h2_userinformation {
+  margin: 10px;
+}
+
+.divTable {
+  margin: 10px;
+  display: table;
+  width: 98.6%;
+  border: 2px solid orangered;
+  border-spacing: 5px;
+}
+
+.headerRow {
+  display: flex;
+  width: 100%;
+}
+
+.divRow {
+  width: 100%;
+  /* display:table-row; */
+  display: flex;
+  float: left;
+}
+
+.divCell {
+  width: 230px;
+  float: left;
+  border-color: white;
+  /* display:table-column; */
+
+}
+
+.background {
+  width: auto;
+  height: auto;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  padding-top: 15px;
+  color: white;
+}
+
+h1 {
+  color: white;
+  font-weight: 600;
+}
+
+.background_h1 {
+  padding-top: 15px;
+}
+
+#Logout {
+  float: right;
+  margin: 15px;
+}
+
+/* W3 SCHOOL */
+
+input[type=text] {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 4px 2px;
+  display: inline-block;
+
+  box-sizing: border-box;
+}
+
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.popupcentre {
+  padding: 20px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.clubcreate {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+
+.clubcreate-content {
+  background-color: #add8e6;
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+ul.navigation li {
+  display: inline;
+  font-size: 15px;
+}
+
+ul.navigation {
+  padding: 6px;
+  background-color: WHITE;
+  list-style: none;
+  margin-top: 5px;
+  margin-left: 4px;
+
+}
+
+ul.navigation li a:hover {
+  color: #01747e;
+  text-decoration: underline;
+}
+
+ul.navigation li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.navigation li+li:before {
+  padding: 5px;
+  color: black;
+  content: ">\00a0";
+}

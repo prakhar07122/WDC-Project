@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="CSS-Stylesheet/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="CSS-Stylesheet/Register.css">
+  <script src="Javascript/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="Javascript/myjscript.js" defer></script>
+  <script>
+      // <span class="Book"><img height="150" weight="150" src="https://www.lboro.ac.uk/media/media/lu-arts/images/home/carousel/book-club-homepage-banner.jpg"></span>
+// <span class="Sport"><img height="150" weight="150" src="Images/sportImage.jpg">
+  </script>
+</head>
+
+<body class="RegisterCenter">
+  <div class="JHeader">
+    <div>
+      <h1 class="H1head"> <img height="60" weight="60" src="Images/logo_page-0001.jpg" alt="web_logo">
+        University Club</h1>
+
+    </div>
+  </div>
+  <h2 class="RegHead">Welcome to University Clubs Page!</h2>
+
+
+  <div class="loginBox">
+    <span><img height="60" weight="60" src="Images/logo_page-0001.jpg"></span>
+    <h3>Register Now! To get exclusive access to the club's benefits, events & much more...</h3>
+    <br>
+    <button onclick="document.getElementById('app1').style.display='block'" style="width:auto;"
+      class="btn btn-primary btn-lg">Register</button>
+    <p> <a href="login.html">Already a member? Login Here</a></p>
+  </div>
+
+  <div id="app1" class="LoginBox1">
+
+    <form onsubmit="register();return false" class="modal-content animate" method="POST">
+      <div class="imgcontainer">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZYZRnFinCRXJw89SIRVXYnX27jjH5CmpqEgxAaKUfAGyD7kACvXutDSl51VPBaSPlLTE&usqp=CAU"
+          alt="Avatar" class="avatar">
+        <span onclick="document.getElementById('app1').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+      </div>
+
+      <br>
+
+      <div class="form-group">
+        <label>Name</label>
+        <br>
+        <span><input id="FName" required class="form-control" v-model="FirstName" maxlength="20" type="text"
+            placeholder="FirstName"></span>
+        <span><input id="LName" required class="form-control" v-model="LastName" maxlength="20" type="text"
+            placeholder="LastName"></span>
+      </div>
+
+      <br>
+
+      <div class="form-group">
+        <label>Username</label>
+        <br>
+        <input id="UserName" required class="form-control" v-model="UserName" maxlength="20" type="text"
+          placeholder="Enter Username">
+      </div>
+
+      <br>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <br>
+        <input id="EmailID" required class="form-control" v-model="EmailID" maxlength="40" type="email"
+          placeholder="Enter Email-Id">
+      </div>
+
+      <br>
+
+      <div>
+        <label>Password</label>
+        <div>
+          <input required class="form-control" id="RPassword" v-model="password1" maxlength="25" type="password"
+            placeholder="**********">
+          <span class="RegPassword" onclick="RegShowPassword()"><img height="30" weight="30"
+              src="https://cdn-icons-png.flaticon.com/512/2710/2710718.png"></span>
+        </div>
+      </div>
+
+      <br>
+
+      <div>
+        <label>Confirm Password</label>
+        <div>
+          <input required class="form-control" id="ConfirmPassword" v-model="password2" v-on:keyup="passwordCheck"
+            maxlength="25" type="password" placeholder="**********">
+          <span class="RegPassword" onclick="RegShowPassword2()"><img height="30" weight="30"
+              src="https://cdn-icons-png.flaticon.com/512/2710/2710718.png"></span>
+        </div>
+
+
+      </div>
+      <br>
+      <div>
+
+        <label>Message:</label>
+        <small id="passStatus"></small>
+      </div>
+
+      <br>
+
+      <div class="d-flex justify-content-between w-100 mt-3">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="button" onclick="document.getElementById('app1').style.display='none'"
+          class="btn btn-primary">Cancel</button>
+      </div>
+
+      <br>
+
+    </form>
+  </div>
+
+  <footer class="text-center text-lg-start bg-light text-muted footer_mod">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us: </span>
+      </div>
+      <!-- Left -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Clubs Community
+            </h6>
+            <p>
+              Proud of the community we have built together, but the fun did not start yet, join us to
+              achieve the best experience. Don't hesitate and contact us whenever you have a question.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              NAME
+            </h6>
+            <p class="text-reset">Jash Suchak</p>
+            <p class="text-reset">Taozui Tao</p>
+            <p class="text-reset">Prakhar Pandey</p>
+            <p class="text-reset">Faisal Hawsawi</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p><i class="fas fa-phone "></i>+61 432 967 356</p>
+            <p><i class="fas fa-phone "></i>+61 434 875 685</p>
+            <p><i class="fas fa-phone "></i>+61 234 567 677</p>
+            <p><i class="fas fa-print "></i>+61 634 875 423</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home "></i>New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope "></i>
+              info@example.com
+            </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+</body>
+
+</html>

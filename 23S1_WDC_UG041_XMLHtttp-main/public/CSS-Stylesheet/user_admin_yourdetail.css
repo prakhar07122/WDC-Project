@@ -1,0 +1,382 @@
+#join {
+  float: right;
+  /* margin-right: 325px;
+  margin-top: 50px; */
+  margin-right: 20%;
+  margin-top: 200px;
+
+  /* background-color: coral; */
+  /* border: none; */
+  border-radius: 8px;
+  font-size: 35px;
+  position: relative;
+}
+
+#events {
+  margin: 10px;
+  /* padding-top: 140px; */
+}
+
+#upcomin_events {
+  border: 2px solid black;
+  padding: 5px;
+  /* width: 100%; */
+}
+
+#upcomin_events_text {
+  font-size: large;
+  font-weight: bold;
+}
+
+#event_list {
+  list-style: square;
+  font-size: larger;
+}
+
+
+.about_box {
+  border: 2px solid black;
+  /* float: left; */
+  width: 600px;
+  height: 600px;
+  border-radius: 8px;
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* /////////////////////////////////////////////////////////ADMIN CSS///////////////////////////////////////////////////////// */
+
+
+#events {
+  margin: 10px;
+  /* padding-top: 140px; */
+}
+
+#upcomin_events {
+  border: 2px solid black;
+  padding: 5px;
+  /* width: 100%; */
+}
+
+#upcomin_events_text {
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+}
+
+#event_list {
+  list-style: square;
+  font-size: larger;
+  /* display: flex; */
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  /* margin-right:510px ; */
+  /* margin-right: 80%; */
+  float: none;
+  position: relative;
+
+}
+
+.delete {
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  position: relative;
+  color: red;
+}
+
+.event_description {
+  margin-right: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  position: relative;
+  /* color: red; */
+}
+
+.event_stat {
+  /* float: right; */
+  margin-right: 10px;
+  padding: 4px 6px 1px 6px;
+  /* border: 2px solid black; */
+  border-radius: 8px;
+  background-color: gray;
+  font-size: 15px;
+  position: relative;
+  color: white;
+
+}
+
+.ligap {
+  margin-bottom: 5px;
+}
+
+#add_event {
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+#h2_userinformation {
+  margin: 10px;
+}
+
+.divTable {
+  margin: 10px;
+  display: table;
+  width: 98.6%;
+  background-color: #eee;
+  border: 2px solid #666666;
+  border-spacing: 5px;
+}
+
+.headerRow {
+  display: flex;
+  width: 100%;
+  background-color: gray;
+}
+
+.divRow {
+  width: 100%;
+  /* display:table-row; */
+  display: flex;
+  float: left;
+  background-color: gray;
+}
+
+.divCell {
+  width: 150px;
+  margin-right: 5px;
+  float: left;
+  /* display:table-column; */
+  overflow: auto;
+
+}
+
+.remove_class {
+
+  background-color: gray;
+
+}
+
+
+/* //////////////////////////////////////////////your details /////////////////////////////////////////////////////////////////////////////////// */
+
+#account_spase {
+  display: none;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: absolute;
+  height: 66.4%;
+  overflow: auto;
+
+}
+
+.side_bar_button {
+  width: 100%;
+}
+
+.sidebar .side_bar_button {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar .side_bar_button.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar .side_bar_button:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 400px;
+}
+
+.first_last_name {
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar .side_bar_button {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar .side_bar_button {
+    text-align: center;
+    float: none;
+  }
+}
+
+
+/* ////////////////////////////////////////////////////////BOTH USER AND ADMIN/////////////////////////////////////////////////////////////////////////////// */
+.Jash {
+  background-color: lightblue;
+}
+
+body {
+  margin: 0%;
+  background-color: cadetblue;
+
+}
+
+#club_title {
+  margin: 10px;
+  margin-top: 190px;
+  /* border: 2px solid black; */
+  padding: 5px;
+  width: 50%;
+  float: left;
+  font-size: xx-large;
+  color: white;
+
+}
+
+.header_back_image {
+  background-image: url('/Images/Untitled-design-2021-10-28T151447.118.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+
+
+}
+
+.mask_back_image {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+}
+
+/* /////////////////////////////////////////////////////////////////ALL//////////////////////////////////////////////////////////////////////////////// */
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Modal (background) & w3 schools */
+
+nav {
+  overflow: auto;
+}
+
+ul.navigation li {
+  display: inline;
+  font-size: 15px;
+}
+
+ul.navigation {
+  padding: 6px;
+  background-color: WHITE;
+  list-style: none;
+  margin-top: 5px;
+  margin-left: 4px;
+
+}
+
+ul.navigation li a:hover {
+  color: #01747e;
+  text-decoration: underline;
+}
+
+ul.navigation li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.navigation li+li:before {
+  padding: 5px;
+  color: black;
+  content: ">\00a0";
+}

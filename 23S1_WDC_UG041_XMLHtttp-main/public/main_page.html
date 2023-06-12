@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Main page</title>
+  <link rel="stylesheet" type="text/css" href="CSS-Stylesheet/bootstrap.css">
+  <link rel="stylesheet" href="CSS-Stylesheet/main_page.css">
+</head>
+
+<body>
+  <div id="main_page">
+    <!-- <div class="main"> -->
+    <div class="background">
+
+      <div class="background_h1">
+        <h1> <img height="60" weight="60" src="Images/logo_page-0001.jpg" alt="web_logo">
+          University Club</h1>
+      </div>
+
+      <div class="buttons-container">
+        <button type="button" class="setting-btn" onclick="goToSettingPage()">Setting</button>
+        <button type="button" class="create-btn admin-btn d-none" onclick="goToAdminPage()">Admin</button>
+      </div>
+
+    </div>
+    <div>
+      <ul class="navigation">
+        <li><a href="/main_page.html">Home</a></li> 
+      </ul> 
+    </div>
+    <div>
+      <button type="button" class="login-btn login-button">Login</button>
+
+      <button type="button" @click="logout" class="login-btn logout-button d-none">Logout</button>
+      <span class="Welcome">Welcome {{username}}</span>
+    </div>
+    <!-- background-img -->
+    <div><img src="Images/UniAde.jpg" class="uni-img" alt="uniAde_img"></div>
+
+    <h2 class="mid_h2">Find a club</h2>
+    <div class="search-box">
+      <input type="text" id="autocomplete_search" class="form-control form-control-lg" placeholder="Search club....">
+    </div>
+    <span id="search_result" class="search-box"></span>
+
+    <h2 class="mid_h2">Choose a club</h2>
+
+    <div class="dropdowns-container">
+
+      <div class="dropdown">
+        <img src="Images/sports.png" class="dropdown-image" alt="sports_img">
+        <h3>Sport</h3>
+        <select name="Sport" v-model="selected" @change="sportClubChange($event)">
+          <option value="">All</option>
+          <option v-for="(item, i) in SportClubs" :value="item.ClubID">{{ item.Club_name }}</option>
+        </select>
+      </div>
+
+      <div class="dropdown">
+        <img src="Images/Faculty.png" class="dropdown-image" alt="faculty_img">
+        <h3>Faculty</h3>
+        <select name="Faculty" v-model="selected" @change="facultyClubChange($event)">
+          <option value="">All</option>
+          <option v-for="(item, i) in FacultyClubs" :value="item.ClubID">{{ item.Club_name }}</option>
+        </select>
+      </div>
+
+      <div class="dropdown">
+        <img src="Images/other.jpg" class="dropdown-image" alt="ohter_img">
+        <h3>Other</h3>
+        <select name="Other" v-model="selected" @change="otherClubChange($event)">
+          <option value="">All</option>
+          <option v-for="(item, i) in OtherClubs" :value="item.ClubID">{{ item.Club_name }}</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="auth-display-none"></div>
+    <div class="joined-clubs-container auth-display d-none">
+      <h3>The clubs that you joined:</h3>
+      <ul class="joined-clubs">
+        <li v-for="item in userClubs">{{item.Club_name}}</li>
+      </ul>
+    </div>
+
+    <!-- </div>  main div-->
+
+    <footer class="text-center text-lg-start bg-light text-muted footer_mod">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5  d-lg-block">
+          <span>Get connected with us: </span>
+        </div>
+        <!-- Left -->
+
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Clubs Community
+              </h6>
+              <p>
+                Proud of the community we have built together, but the fun did not start yet, join us to
+                achieve the best experience. Don't hesitate and contact us whenever you have a question.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                NAME
+              </h6>
+              <p class="text-reset">Jash Suchak</p>
+              <p class="text-reset">Taozui Tao</p>
+              <p class="text-reset">Prakhar Pandey</p>
+              <p class="text-reset">Faisal Hawsawi</p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+              </h6>
+              <p><i class="fas fa-phone "></i>+61 432 967 356</p>
+              <p><i class="fas fa-phone "></i>+61 434 875 685</p>
+              <p><i class="fas fa-phone "></i>+61 234 567 677</p>
+              <p><i class="fas fa-print "></i>+61 634 875 423</p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home "></i>New York, NY 10012, US</p>
+              <p>
+                <i class="fas fa-envelope "></i>
+                info@example.com
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+  </div>
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="Javascript/bootstrap.min.js"></script>
+<script src="Javascript/myjscript.js"></script>
+<script src="Javascript/main_page.js"></script>

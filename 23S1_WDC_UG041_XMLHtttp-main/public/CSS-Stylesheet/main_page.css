@@ -1,0 +1,178 @@
+.background {
+    width: auto;
+    height: auto;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    padding-top: 15px;
+    color: white;
+}
+
+.Welcome {
+    float: right;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+h1 {
+    color: white;
+    font-weight: 600;
+}
+
+body {
+    margin: 0px;
+}
+
+.background_h1 {
+    padding-top: 15px;
+}
+
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+}
+
+.mid_h2 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdowns-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.dropdown {
+    margin-right: 10px;
+}
+
+.dropdown-image {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+}
+
+.setting-btn,
+.create-btn {
+    background-color: transparent;
+    color: gray;
+    border: none;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.joined-clubs-container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.auth-display-none {
+    margin-top: 286px;
+}
+
+.joined-clubs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.joined-clubs li {
+    margin: 5px 0;
+}
+
+.uni-img {
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/*W3 Schools*/
+
+ul.navigation li {
+    display: inline;
+    font-size: 15px;
+}
+
+ul.navigation {
+    padding: 6px;
+    background-color: WHITE;
+    list-style: none;
+    margin-top: 5px;
+    margin-left: 4px;
+
+}
+
+ul.navigation li a:hover {
+    color: #01747e;
+    text-decoration: underline;
+}
+
+ul.navigation li a {
+    color: #0275d8;
+    text-decoration: none;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" type="text/css" href="/CSS-Stylesheet/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/CSS-Stylesheet/admin.css">
+    <script src="./Javascript/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./Javascript/myjscript.js" defer></script>
+</head>
+
+<body>
+    <div id="admin">
+        <div>
+            <div class="background">
+
+                <div class="background_h1">
+                    <h1> <img height="60" weight="60" src="Images/logo_page-0001.jpg" alt="web_logo">
+                        University Club</h1>
+                </div>
+            </div>
+            <ul class="navigation">
+                <li><a href="/main_page.html">Home</a></li>
+                <li><a href="/admin.html">Admin</a></li> 
+            </ul>
+            <a href="main_page.html" id="Logout" class="btn btn-primary mx-sm-4 px-sm-4">Go back</a>
+            <h2 class="h2_userinformation">Manage User</h2>
+            <div class="divTable rounded p-sm-2 bg-light">
+                <div class="headerRow">
+                    <div class="divCell"><b>User name</b></div>
+                    <div class="divCell"><b>Email</b></div>
+
+                    <div class="divCell"><b>First name</b></div>
+                    <div class="divCell"><b>Last name</b></div>
+                    <div class="divCell"><b>Delete</b></div>
+                </div>
+                <div v-for="user in manage_user">
+                    <div class="divRow">
+                        <div class="divCell">{{ user.Username }}</div>
+                        <div class="divCell">{{ user.Email }}</div>
+                        <div class="divCell">{{ user.GivenName }}</div>
+                        <div class="divCell">{{ user.FamilyName }}</div>
+                        <button class="btn btn-danger remove" v-on:click="remove_user(user.UserID)"
+                            type="button">X</button>
+                    </div>
+                </div>
+
+            </div>
+            <h2 class="h2_userinformation">Manage Clubs</h2>
+            <div class="divTable rounded p-sm-2 bg-light">
+                <div class="headerRow">
+                    <div class="divCell"><b>Name</b></div>
+                    <div class="divCell"><b>Club Name</b></div>
+                    <div class="divCell"><b>Club type</b></div>
+                    <div class="divCell"><b>Delete Club</b></div>
+                </div>
+                <div v-for="club in manage_clubs">
+                    <div class="divRow">
+                        <div class="divCell">{{ club.Manager }}</div>
+                        <div class="divCell">{{ club.Club_name }}</div>
+                        <div class="divCell">{{ club.Category }}</div>
+                        <button class="btn btn-danger remove" v-on:click="remove_club(club.ClubID)"
+                            type="button">X</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="h2_userinformation">Add a new admin</h2>
+            <div class="divTable rounded p-sm-2 bg-light">
+                <div class="headerRow mx-3">
+                    <div class="divCell"><b>Add Admin</b></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell mx-2">
+                        <input id="newadmin" type="text" class="form-control" placeholder="Email" />
+                    </div>
+                    <button onclick="addAdmin()" class="btn btn-primary mx-sm-4 px-sm-4" type="button">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="button" class="btn btn-primary mx-sm-4 px-sm-4"
+            onclick="document.getElementById('makeclub').style.display='block'" style="width:auto;">Make Club</button>
+
+        <div id="makeclub" class="clubcreate">
+
+            <form onsubmit="createclub(); return false" class="clubcreate-content animate" method="post">
+
+                <div class="popupcentre">
+                    <label for="clubname"><b>Club name</b></label>
+                    <input type="text" id="clubname" placeholder="Enter Clubs Name" name="clubname" required>
+
+                    <label for="psw"><b>Manager Name</b></label>
+                    <input type="text" id="ManagerN" placeholder="Enter Managers Name" name="psw" required>
+                    <label for="psw"><b>Category:</b></label>
+                    <br>
+                    <select id="category" name="category">
+                        <option value="Sport">Sport</option>
+                        <option value="Faculty">Faculty</option>
+                        <option value="Other">Other</option>
+                    </select> <br />
+                    <p><label for="TBox">Club Description:</label></p>
+                    <textarea id="About_club" name="About_club" rows="5" cols="50"></textarea>
+
+
+                    <div>
+                        <button type="submit" class="btn btn-primary mx-sm-4 px-sm-4">Create Club</button>
+                        <button type="button" class="btn btn-primary mx-sm-4 px-sm-4"
+                            onclick="document.getElementById('makeclub').style.display='none'">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

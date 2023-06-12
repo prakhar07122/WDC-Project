@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>admin page</title>
+    <link rel="stylesheet" type="text/css" href="CSS-Stylesheet/bootstrap.css">
+    <link rel="stylesheet" href="/CSS-Stylesheet/AdminClubView.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- <script src="Javascript/user_admin_account.js" defer></script> -->
+</head>
+
+<body>
+    <div id="AdminClubView">
+        <header>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarExample01">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item active">
+                                <a class="btn btn-outline-success my-2 my-sm-0 nav-link" aria-current="page"
+                                    href="main_page.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-outline-success my-2 my-sm-0 nav-link" href="Your_details.html">My
+                                    Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <button id="myBtn" class="btn btn-outline-success my-2 my-sm-0 nav-link "
+                                    type="button">About</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </nav>
+            <!-- <ul class="navigation">
+                <li><a href="/main_page.html">Home</a></li>
+                <li><a href="/AdminClubView.html">My Club</a></li> 
+            </ul> -->
+            <!-- Navbar -->
+
+            <!-- Background image -->
+            <div class="  bg-image header_back_image">
+                <div class="mask mask_back_image ">
+                    <div id="club_title" class="text-center">
+                        <h1 id="club_name">.</h1>
+                        <p id="admin">Club manager name: {{username}} </p>
+                    </div>
+                    <button id="join" class="btn btn-primary" type="button">Join</button>
+                </div>
+            </div>
+            <!-- Background image -->
+        </header>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span id="close_des" class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+        </div>
+        <!-- The Modal -->
+
+        <div id="events">
+            <h2>Events </h2>
+            <div id="upcomin_events">
+                <p id="upcomin_events_text">Upcomin Events</p>
+                <ul id="event_list">
+                </ul>
+                <button id="add_event" class="btn btn-secondary" type="button">Add event</button>
+            </div>
+        </div>
+
+        <!-- event modal -->
+        <div id="eventmodal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Event title</span>
+                    <input type="text" id="Event_name" class="form-control" placeholder="Event name"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Location</span>
+                    <input type="text" id="Event_location" class="form-control" placeholder="Event location"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Date</span>
+                    <input id="date" placeholder="Select event date" class="form-control" type="date">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Add description information</span>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Private
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Public
+                    </label>
+                </div>
+                <button id="done" type="button" class="btn btn-primary">Done</button>
+            </div>
+
+        </div>
+        <!-- The event modal -->
+
+        <div id="modals_group">
+            <!-- description_modal -->
+            <!-- <div class="modal descriptionmodal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Event details</p>
+            </div>
+        </div> -->
+            <!-- description_modal -->
+
+        </div>
+
+        <h2 id="h2_userinformation">User information</h2>
+        <div class="divTable" id="divTable">
+            <div class="headerRow">
+                <div class="divCell"><b>No</b></div>
+                <div class="divCell"><b>User name</b></div>
+                <div class="divCell"><b>Email</b></div>
+                <div class="divCell"><b>Remove</b></div>
+            </div>
+
+        </div>
+        <footer class="text-center text-lg-start bg-light text-muted footer_mod">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Get connected with us: </span>
+                </div>
+                <!-- Left -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class="fas fa-gem me-3"></i>Clubs Community
+                            </h6>
+                            <p>
+                                Proud of the community we have built together, but the fun did not start yet, join us to
+                                achieve the best experience. Don't hesitate and contact us whenever you have a question.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                NAME
+                            </h6>
+                            <p class="text-reset">Jash Suchak</p>
+                            <p class="text-reset">Taozui Tao</p>
+                            <p class="text-reset">Prakhar Pandey</p>
+                            <p class="text-reset">Faisal Hawsawi</p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Useful links
+                            </h6>
+                            <p><i class="fas fa-phone "></i>+61 432 967 356</p>
+                            <p><i class="fas fa-phone "></i>+61 434 875 685</p>
+                            <p><i class="fas fa-phone "></i>+61 234 567 677</p>
+                            <p><i class="fas fa-print "></i>+61 634 875 423</p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                            <p><i class="fas fa-home "></i>New York, NY 10012, US</p>
+                            <p>
+                                <i class="fas fa-envelope "></i>
+                                info@example.com
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+</body>
+<script src="Javascript/AdminClubView.js" defer></script>
+
+</html>
